@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> Aula 11 - Exercício 3 - Calculadora dinâmica </title>
+    </head>
+    <body>
+        <script>
+            var numeroInicial = prompt('Por favor, informe um numero');
+
+            var sinal = prompt('Por favor, informe o sinal de sua operação');
+
+            while(sinal != '-' && sinal != '+' && sinal != '/' && sinal != '*'){
+                alert('Por favor, informe um sinal válido!');
+                sinal = prompt('Por favor, informe o sinal de sua operação');  
+            }
+       
+
+            var numeroFinal = prompt('Por favor, informe o numero final');
+
+            numeroInicial = parseInt(numeroInicial);
+            numeroFinal = parseInt(numeroFinal);
+
+
+            var resultadoFinal = 0;
+
+            if(sinal == '+'){
+                resultadoFinal = numeroInicial + numeroFinal;
+            }else if(sinal == '-'){
+                resultadoFinal = numeroInicial - numeroFinal;
+            }else if(sinal == '/'){
+                resultadoFinal = numeroInicial / numeroFinal;
+            }else if(sinal == '*'){
+                resultadoFinal = numeroInicial * numeroFinal;
+            }
+
+
+            alert('O resultado final é: '+resultadoFinal);
+        </script>
+    </body>
+</html>
